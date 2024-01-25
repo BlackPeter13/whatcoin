@@ -1,7 +1,7 @@
 # Multistage docker build, requires docker 17.05
 
 # builder stage
-FROM ubuntu:lunar-20230615 as builder
+FROM ubuntu:mantic as builder
 
 RUN set -ex && \
     apt-get update && \
@@ -123,7 +123,7 @@ RUN set -ex && \
     fi
 
 # runtime stage
-FROM ubuntu:lunar-20230615
+FROM ubuntu:mantic
 
 RUN set -ex && \
     apt-get update && \
